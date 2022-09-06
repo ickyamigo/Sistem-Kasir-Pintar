@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="186" pageHeight="366" columnWidth="186" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ce0fd269-b854-485f-9e62-c759d21b46b3">
+	<property name="ireport.zoom" value="1.9487171000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="New Dataset 1" uuid="d6d75824-729f-461b-ab02-2ee539e4f627">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     *,
+     detail_jual_A.`Kode_Jual` AS detail_jual_A_Kode_Jual,
+     detail_jual_A.`Tgl_Jual` AS detail_jual_A_Tgl_Jual,
+     detail_jual_A.`Total_Semua` AS detail_jual_A_Total_Semua,
+     detail_jual_A.`Kembalian` AS detail_jual_A_Kembalian,
+     detail_jual_A.`Bayar` AS detail_jual_A_Bayar
+FROM
+     `detail_jual` detail_jual_A INNER JOIN `transaksi_juall` transaksi_juall ON detail_jual_A.`Kode_Jual` = transaksi_juall.`Kode_Jual`]]>
+		</queryString>
+		<field name="Kode_Jual" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Total_Semua" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Tgl_Jual" class="java.sql.Date">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Kembalian" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Bayar" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Kode_Barang" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Jumlah" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Tanggal_Jual" class="java.sql.Date">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Nama_Barang" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Total" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="New Dataset 2" uuid="b9d55c02-8989-4ac5-be66-7af4e60392a5">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     detail_jual.`Kode_Jual` AS detail_jual_Kode_Jual,
+     detail_jual.`Tgl_Jual` AS detail_jual_Tgl_Jual,
+     detail_jual.`Total_Semua` AS detail_jual_Total_Semua,
+     detail_jual.`Kembalian` AS detail_jual_Kembalian,
+     detail_jual.`Bayar` AS detail_jual_Bayar,
+     transaksi_juall.`Kode_Barang` AS transaksi_juall_Kode_Barang,
+     transaksi_juall.`Jumlah` AS transaksi_juall_Jumlah,
+     transaksi_juall.`Tanggal_Jual` AS transaksi_juall_Tanggal_Jual,
+     transaksi_juall.`Nama_Barang` AS transaksi_juall_Nama_Barang,
+     transaksi_juall.`Kode_Jual` AS transaksi_juall_Kode_Jual,
+     transaksi_juall.`Total` AS transaksi_juall_Total
+FROM
+     `detail_jual` detail_jual INNER JOIN `transaksi_juall` transaksi_juall ON detail_jual.`Kode_Jual` = transaksi_juall.`Kode_Jual`]]>
+		</queryString>
+		<field name="detail_jual_Total_Semua" class="java.lang.Integer"/>
+		<field name="transaksi_juall_Total" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="New Dataset 3" uuid="117ae072-4aca-4840-b8b2-d5c1b999fbb5">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     detail_jual.`Kode_Jual` AS detail_jual_Kode_Jual,
+     detail_jual.`Tgl_Jual` AS detail_jual_Tgl_Jual,
+     detail_jual.`Total_Semua` AS detail_jual_Total_Semua,
+     detail_jual.`Kembalian` AS detail_jual_Kembalian,
+     detail_jual.`Bayar` AS detail_jual_Bayar,
+     transaksi_juall.`Kode_Barang` AS transaksi_juall_Kode_Barang,
+     transaksi_juall.`Jumlah` AS transaksi_juall_Jumlah,
+     transaksi_juall.`Tanggal_Jual` AS transaksi_juall_Tanggal_Jual,
+     transaksi_juall.`Nama_Barang` AS transaksi_juall_Nama_Barang,
+     transaksi_juall.`Kode_Jual` AS transaksi_juall_Kode_Jual,
+     transaksi_juall.`Total` AS transaksi_juall_Total
+FROM
+     `detail_jual` detail_jual INNER JOIN `transaksi_juall` transaksi_juall ON detail_jual.`Kode_Jual` = transaksi_juall.`Kode_Jual`]]>
+		</queryString>
+		<field name="detail_jual_Kode_Jual" class="java.lang.String"/>
+		<field name="detail_jual_Tgl_Jual" class="java.sql.Date"/>
+		<field name="detail_jual_Total_Semua" class="java.lang.Integer"/>
+		<field name="detail_jual_Kembalian" class="java.lang.Integer"/>
+		<field name="detail_jual_Bayar" class="java.lang.Integer"/>
+		<field name="transaksi_juall_Kode_Barang" class="java.lang.String"/>
+		<field name="transaksi_juall_Jumlah" class="java.lang.Integer"/>
+		<field name="transaksi_juall_Tanggal_Jual" class="java.sql.Date"/>
+		<field name="transaksi_juall_Nama_Barang" class="java.lang.String"/>
+		<field name="transaksi_juall_Kode_Jual" class="java.lang.String"/>
+		<field name="transaksi_juall_Total" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="New Dataset 4" uuid="0591f409-9747-49fc-97ab-b8b9d9bca94e">
+		<queryString language="SQL">
+			<![CDATA[select * from transaksi_juall join detail_jual on transaksi_juall.Kode_Jual = detail_jual.Kode_Jual WHERE detail_jual.Kode_Jual;]]>
+		</queryString>
+		<field name="Kode_Barang" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Jumlah" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Tanggal_Jual" class="java.sql.Date">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Nama_Barang" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Kode_Jual" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Total" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Tgl_Jual" class="java.sql.Date">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Total_Semua" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Kembalian" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Bayar" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="New Dataset 5" uuid="cbc29eb2-497c-47fa-b340-f9e0886c296d">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     transaksi_juall.`Kode_Barang` AS transaksi_juall_Kode_Barang,
+     transaksi_juall.`Jumlah` AS transaksi_juall_Jumlah,
+     transaksi_juall.`Tanggal_Jual` AS transaksi_juall_Tanggal_Jual,
+     transaksi_juall.`Nama_Barang` AS transaksi_juall_Nama_Barang,
+     transaksi_juall.`Kode_Jual` AS transaksi_juall_Kode_Jual,
+     transaksi_juall.`Total` AS transaksi_juall_Total,
+     detail_jual.`Kode_Jual` AS detail_jual_Kode_Jual,
+     detail_jual.`Tgl_Jual` AS detail_jual_Tgl_Jual,
+     detail_jual.`Total_Semua` AS detail_jual_Total_Semua,
+     detail_jual.`Kembalian` AS detail_jual_Kembalian,
+     detail_jual.`Bayar` AS detail_jual_Bayar
+FROM
+     `detail_jual` detail_jual INNER JOIN `transaksi_juall` transaksi_juall ON detail_jual.`Kode_Jual` = transaksi_juall.`Kode_Jual`]]>
+		</queryString>
+		<field name="transaksi_juall_Kode_Barang" class="java.lang.String"/>
+		<field name="transaksi_juall_Jumlah" class="java.lang.Integer"/>
+		<field name="transaksi_juall_Tanggal_Jual" class="java.sql.Date"/>
+		<field name="transaksi_juall_Nama_Barang" class="java.lang.String"/>
+		<field name="transaksi_juall_Kode_Jual" class="java.lang.String"/>
+		<field name="transaksi_juall_Total" class="java.lang.Integer"/>
+		<field name="detail_jual_Kode_Jual" class="java.lang.String"/>
+		<field name="detail_jual_Tgl_Jual" class="java.sql.Date"/>
+		<field name="detail_jual_Total_Semua" class="java.lang.Integer"/>
+		<field name="detail_jual_Kembalian" class="java.lang.Integer"/>
+		<field name="detail_jual_Bayar" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="New Dataset 6" uuid="a6bf7e22-329f-4aa5-bdeb-febd202995e0">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     *
+FROM
+     `transaksi_juall` transaksi_juall INNER JOIN `transaksi_juall` detail_jual ON transaksi_juall.`Kode_Jual` = detail_jual.`Kode_Jual`]]>
+		</queryString>
+		<field name="Kode_Barang" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Jumlah" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Tanggal_Jual" class="java.sql.Date">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Nama_Barang" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Kode_Jual" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Total" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="New Dataset 7" uuid="4522f570-426d-45c6-a6b9-847eedf8affa">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     *,
+     detail_jual_A.`Kode_Jual` AS detail_jual_A_Kode_Jual,
+     detail_jual_A.`Tgl_Jual` AS detail_jual_A_Tgl_Jual,
+     detail_jual_A.`Total_Semua` AS detail_jual_A_Total_Semua,
+     detail_jual_A.`Kembalian` AS detail_jual_A_Kembalian,
+     detail_jual_A.`Bayar` AS detail_jual_A_Bayar
+FROM
+     `detail_jual` detail_jual_A INNER JOIN `transaksi_juall` transaksi_juall ON detail_jual_A.`Kode_Jual` = transaksi_juall.`Kode_Jual`]]>
+		</queryString>
+		<field name="Kode_Jual" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Tgl_Jual" class="java.sql.Date">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Total_Semua" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Kembalian" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Bayar" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Kode_Barang" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Jumlah" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Tanggal_Jual" class="java.sql.Date">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Nama_Barang" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Total" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="detail_jual_A_Kode_Jual" class="java.lang.String"/>
+		<field name="detail_jual_A_Tgl_Jual" class="java.sql.Date"/>
+		<field name="detail_jual_A_Total_Semua" class="java.lang.Integer"/>
+		<field name="detail_jual_A_Kembalian" class="java.lang.Integer"/>
+		<field name="detail_jual_A_Bayar" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="New Dataset 8" uuid="32f33892-8ce5-406a-94e7-f7488140c0cd">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     keranjang_jual.`Kode_Jual` AS keranjang_jual_Kode_Jual,
+     keranjang_jual.`Tanggal_Jual` AS keranjang_jual_Tanggal_Jual,
+     keranjang_jual.`Kode_Barang` AS keranjang_jual_Kode_Barang,
+     keranjang_jual.`Nama_Barang` AS keranjang_jual_Nama_Barang,
+     keranjang_jual.`Jumlah` AS keranjang_jual_Jumlah,
+     keranjang_jual.`Total` AS keranjang_jual_Total,
+     transaksi_juall.`Kode_Barang` AS transaksi_juall_Kode_Barang,
+     transaksi_juall.`Jumlah` AS transaksi_juall_Jumlah,
+     transaksi_juall.`Tanggal_Jual` AS transaksi_juall_Tanggal_Jual,
+     transaksi_juall.`Nama_Barang` AS transaksi_juall_Nama_Barang,
+     transaksi_juall.`Kode_Jual` AS transaksi_juall_Kode_Jual,
+     transaksi_juall.`Total` AS transaksi_juall_Total
+FROM
+     `keranjang_jual` keranjang_jual,
+     `transaksi_juall` transaksi_juall]]>
+		</queryString>
+		<field name="keranjang_jual_Kode_Jual" class="java.lang.String"/>
+		<field name="keranjang_jual_Tanggal_Jual" class="java.sql.Date"/>
+		<field name="keranjang_jual_Kode_Barang" class="java.lang.String"/>
+		<field name="keranjang_jual_Nama_Barang" class="java.lang.String"/>
+		<field name="keranjang_jual_Jumlah" class="java.lang.Integer"/>
+		<field name="keranjang_jual_Total" class="java.lang.Integer"/>
+		<field name="transaksi_juall_Kode_Barang" class="java.lang.String"/>
+		<field name="transaksi_juall_Jumlah" class="java.lang.Integer"/>
+		<field name="transaksi_juall_Tanggal_Jual" class="java.sql.Date"/>
+		<field name="transaksi_juall_Nama_Barang" class="java.lang.String"/>
+		<field name="transaksi_juall_Kode_Jual" class="java.lang.String"/>
+		<field name="transaksi_juall_Total" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="New Dataset 9" uuid="ef166fff-c096-4d37-9ab1-6d113bbd8b93">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     detail_jual.`Kode_Jual` AS detail_jual_Kode_Jual,
+     detail_jual.`Tanggal_Jual` AS detail_jual_Tanggal_Jual,
+     detail_jual.`Total_Semua` AS detail_jual_Total_Semua,
+     detail_jual.`Kembalian` AS detail_jual_Kembalian,
+     detail_jual.`Bayar` AS detail_jual_Bayar,
+     transaksi_juall.`Kode_Barang` AS transaksi_juall_Kode_Barang,
+     transaksi_juall.`Jumlah` AS transaksi_juall_Jumlah,
+     transaksi_juall.`Tanggal_Jual` AS transaksi_juall_Tanggal_Jual,
+     transaksi_juall.`Nama_Barang` AS transaksi_juall_Nama_Barang,
+     transaksi_juall.`Kode_Jual` AS transaksi_juall_Kode_Jual,
+     transaksi_juall.`Total` AS transaksi_juall_Total
+FROM
+     `detail_jual` detail_jual INNER JOIN `transaksi_juall` transaksi_juall ON detail_jual.`Kode_Jual` = transaksi_juall.`Kode_Jual`]]>
+		</queryString>
+		<field name="detail_jual_Kode_Jual" class="java.lang.String"/>
+		<field name="detail_jual_Tanggal_Jual" class="java.sql.Date"/>
+		<field name="detail_jual_Total_Semua" class="java.lang.Integer"/>
+		<field name="detail_jual_Kembalian" class="java.lang.Integer"/>
+		<field name="detail_jual_Bayar" class="java.lang.Integer"/>
+		<field name="transaksi_juall_Kode_Barang" class="java.lang.String"/>
+		<field name="transaksi_juall_Jumlah" class="java.lang.Integer"/>
+		<field name="transaksi_juall_Tanggal_Jual" class="java.sql.Date"/>
+		<field name="transaksi_juall_Nama_Barang" class="java.lang.String"/>
+		<field name="transaksi_juall_Kode_Jual" class="java.lang.String"/>
+		<field name="transaksi_juall_Total" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="New Dataset 10" uuid="26e86a13-142c-417a-8589-3cd80f3d4960">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     detail_jual.`Kode_Jual` AS detail_jual_Kode_Jual,
+     detail_jual.`Tanggal_Jual` AS detail_jual_Tanggal_Jual,
+     detail_jual.`Total_Semua` AS detail_jual_Total_Semua,
+     detail_jual.`Kembalian` AS detail_jual_Kembalian,
+     detail_jual.`Bayar` AS detail_jual_Bayar,
+     transaksi_juall.`Kode_Barang` AS transaksi_juall_Kode_Barang,
+     transaksi_juall.`Jumlah` AS transaksi_juall_Jumlah,
+     transaksi_juall.`Tanggal_Jual` AS transaksi_juall_Tanggal_Jual,
+     transaksi_juall.`Nama_Barang` AS transaksi_juall_Nama_Barang,
+     transaksi_juall.`Kode_Jual` AS transaksi_juall_Kode_Jual,
+     transaksi_juall.`Total` AS transaksi_juall_Total
+FROM
+     `detail_jual` detail_jual INNER JOIN `transaksi_juall` transaksi_juall ON detail_jual.`Kode_Jual` = transaksi_juall.`Kode_Jual`]]>
+		</queryString>
+		<field name="detail_jual_Kode_Jual" class="java.lang.String"/>
+		<field name="detail_jual_Tanggal_Jual" class="java.sql.Date"/>
+		<field name="detail_jual_Total_Semua" class="java.lang.Integer"/>
+		<field name="detail_jual_Kembalian" class="java.lang.Integer"/>
+		<field name="detail_jual_Bayar" class="java.lang.Integer"/>
+		<field name="transaksi_juall_Kode_Barang" class="java.lang.String"/>
+		<field name="transaksi_juall_Jumlah" class="java.lang.Integer"/>
+		<field name="transaksi_juall_Tanggal_Jual" class="java.sql.Date"/>
+		<field name="transaksi_juall_Nama_Barang" class="java.lang.String"/>
+		<field name="transaksi_juall_Kode_Jual" class="java.lang.String"/>
+		<field name="transaksi_juall_Total" class="java.lang.Integer"/>
+	</subDataset>
+	<parameter name="kode" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from transaksi_juall join detail_jual on transaksi_juall.Kode_Jual = detail_jual.Kode_Jual WHERE detail_jual.Kode_Jual= $P{kode};]]>
+	</queryString>
+	<field name="Kode_Barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jumlah" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tanggal_Jual" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nama_Barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Kode_Jual" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Total_Semua" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Kembalian" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Bayar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="19" width="186" height="17" uuid="90fed509-ccc8-4fbb-a2b2-66bc380c07b5"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOKO BU JAMILAH]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="78" width="186" height="1" uuid="7c24c28f-3e67-4cb6-bedd-dd511b79ac93"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="49" width="176" height="17" uuid="027e790b-3d49-45c7-a759-b236a3096038"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[JL DAWUHAN MANGLI SUKOWONO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="85" height="18" uuid="0c252059-a6d2-4580-b848-b4107dec903b"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Taransaksi    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="85" height="11" uuid="cc24e639-bd5a-44e9-be25-7ec8c647d1b0"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Transaksi :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="42" width="54" height="17" uuid="19ecc976-dc2b-4258-97bb-e1dcc6927110"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="42" width="14" height="17" uuid="99b39cc2-6a83-42d6-9502-ad3a26d32066"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="42" width="54" height="17" uuid="1c9a93aa-5b5b-48af-9fc1-5afd03439095"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="92" y="0" width="62" height="18" uuid="92f357ac-fde1-46a0-a7d3-488ddaccff1f"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Kode_Jual}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="147" y="42" width="26" height="17" uuid="551b28ba-fbef-42b1-8108-d593b3190527"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="41" width="186" height="1" uuid="758021ce-8188-4a94-85e7-7c8c9358fac1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="59" width="186" height="1" uuid="73c92df5-9c3f-4324-91a9-8754fc467b3a"/>
+			</line>
+			<textField>
+				<reportElement x="92" y="22" width="81" height="11" uuid="2a3a2797-99d2-4e2e-90cf-c671aac53e7a"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tanggal_Jual}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="118" y="2" width="19" height="12" uuid="48db0025-d37c-4b7e-b976-2d0aef5045fc"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Jumlah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="147" y="0" width="39" height="14" uuid="84d954bc-3861-427c-96fd-bfa2ed86428e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="54" height="11" uuid="237f1e37-9b23-4a43-84af-70b548d3d5a5"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Kode_Barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="59" y="2" width="33" height="12" uuid="52d350d8-283f-4b8b-9fe8-7da7485d56a8"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nama_Barang}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="130" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="85" width="167" height="18" uuid="d8386fb2-aeea-4808-a0b9-eb573aa6bd29"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Terimakasih Telah Berbelanja  Di Toko Kami]]></text>
+			</staticText>
+			<line>
+				<reportElement x="70" y="65" width="116" height="1" uuid="8c73e412-bdc4-4646-9ee2-b3ae6175df98"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="186" height="1" uuid="783f5922-4ee0-4497-bb25-0e6908d98576"/>
+			</line>
+			<staticText>
+				<reportElement x="70" y="41" width="62" height="18" uuid="e6946bec-59a0-43a7-9de7-fddadff53c79"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kembalian       :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="23" width="62" height="18" uuid="66fcac11-edcf-46e0-9fbf-95f3a6d82be5"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bayar               :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="8" width="62" height="15" uuid="26095ba7-3ae9-4010-bd1c-79edcada5cb4"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total                 :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="141" y="42" width="44" height="18" uuid="b0d6a8dc-1608-4fa8-aff0-9cf062f35508"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Kembalian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="23" width="45" height="18" uuid="7d62c450-25e2-440b-af49-c8d7eeb9be47"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bayar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="9" width="45" height="14" uuid="e6ce2d07-7f33-4d42-8992-f6a910a10c7b"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total_Semua}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

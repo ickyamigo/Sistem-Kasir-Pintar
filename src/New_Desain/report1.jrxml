@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0ad763ac-3902-4f2d-98fa-d6d08e13006d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="KodeBeLi" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     *
+FROM
+     `transaksi_beli` where Kode_Beli = $P {KodeBeli}]]>
+	</queryString>
+	<field name="Kode_Sup" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Kode_Beli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tgl_beli" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Id_Petugas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Kode_Barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jumlah" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Total_Harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="Total_Harga_1" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{Total_Harga}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="152" y="0" width="220" height="43" uuid="84b3c8bc-1210-4c03-9784-ee0baff88737"/>
+				<textElement>
+					<font fontName="Adobe Garamond Pro" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOKO BU JAMILAH]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="177" splitType="Stretch">
+			<textField>
+				<reportElement x="136" y="44" width="100" height="20" uuid="bd620dd0-413e-4345-831d-9d75ed0836c9"/>
+				<textFieldExpression><![CDATA[$F{Kode_Barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="3" width="100" height="20" uuid="3852bd76-ba7f-420c-8fc8-14ec08899225"/>
+				<textFieldExpression><![CDATA[$F{Tgl_beli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="90" width="100" height="20" uuid="2b140067-89eb-4310-a528-cc2959fd4262"/>
+				<textFieldExpression><![CDATA[$F{Jumlah}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="3" width="100" height="20" uuid="c19dfc58-d2ef-40e3-95bb-6c74aaeaa2a4"/>
+				<text><![CDATA[Tanggal Beli ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="44" width="100" height="20" uuid="494ea23d-70b0-4682-952c-a5adab0282cb"/>
+				<text><![CDATA[Kode Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="100" height="20" uuid="2159bb3d-1d21-4de9-87fe-89d850c2c7c9"/>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="136" y="131" width="100" height="20" uuid="85798cd6-d0f4-41d8-8f90-138144103db2"/>
+				<textFieldExpression><![CDATA[$F{Total_Harga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+</jasperReport>
